@@ -14,8 +14,25 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-RN-aG5">
+                        <rect key="frame" x="16" y="12" width="42" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Vh-RN-aG5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="4UL-MM-ocH"/>
+                    <constraint firstAttribute="bottom" secondItem="7Vh-RN-aG5" secondAttribute="bottom" constant="12" id="Cib-PG-XMM"/>
+                    <constraint firstItem="7Vh-RN-aG5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hj7-cl-g6p"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="7Vh-RN-aG5" id="N65-h5-cwI"/>
+            </connections>
+            <point key="canvasLocation" x="113.04347826086958" y="108.48214285714285"/>
         </tableViewCell>
     </objects>
 </document>

@@ -9,15 +9,18 @@ import UIKit
 
 class MVPTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    static var className: String { String(describing: MVPTableViewCell.self)}
+    
+    @IBOutlet weak private var label: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = nil
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(githubModel: GithubModel) {
+        label.text = githubModel.fullName
     }
     
 }
